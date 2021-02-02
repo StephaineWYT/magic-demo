@@ -11,19 +11,19 @@ import org.ssssssss.script.functions.DateExtension;
 public class CustomFunc implements MagicFunction {
 
   @Function
-  @Comment("嘿嘿，自定义的！")
+  @Comment("自定义函数：无参有返回值")
   public static Date customNow() {
     return new Date();
   }
 
   @Function
-  @Comment("日期格式化")
+  @Comment("自定义函数：有参有返回值")
   public static String dateFormat(@Comment("目标日期") Date target) {
     return target == null ? null : DateExtension.format(target, "yyyy-MM-dd HH:mm:ss");
   }
 
   @Function
-  @Comment("判断值是否为空")
+  @Comment("自定义函数：多个参数有返回值")
   public static Object ifNull(
       @Comment("目标值") Object target,
       @Comment("为空的值") Object trueValue,
